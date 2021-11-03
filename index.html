@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Amplitude</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      background-color: white;
+    }
+  </style>
 </head>
-<body>
-  <canvas id="GameCanvas" width="1280" height="720" style="padding: 0;margin: auto; border: 2px black solid;display: block;"></canvas>
 
+<body>
+  <canvas id="GameCanvas" width="1280" height="720"></canvas>
   <script src="numbers.js"></script>
   <script src="amplitude.js"></script>
   <script src="engine.js"></script>
 </body>
+<script>
+  window.addEventListener("keydown", (e) => {
+    if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+      e.preventDefault();
+    }
+  }, false);
+</script>
+
 </html>
